@@ -1,24 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-     <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arnab | Tech Creator</title>
+    <meta name="description" content="A Personal Website by Arnab Debnath">
+    <title>Home Page - Arnab Debnath</title>
+    <link rel="stylesheet" href="/Arnab-Debnath/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
     <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #0f0f0f;
-            color: white;
-            text-align: center;
-            transition: 0.3s;
-        }
-
-        .light-mode {
-            background: #f4f4f4;
-            color: black;
-        }
-
         header {
             padding: 50px 20px;
         }
@@ -27,23 +18,38 @@
             width: 150px;
             border-radius: 50%;
             margin-bottom: 15px;
-            border: 4px solid #00ffd5;
+            border: 4px solid #FE7642;
+            box-shadow: 0 0 15px #447d9b;
         }
 
-        h1 { font-size: 40px;
-             margin: 10px 0;
-             margin-bottom: 0 ; 
+        h1 {
+            font-size: 40px;
+            margin: 10px 0;
+            margin-bottom: 0;
+            color: #FE7642;
+            font-family:'Poppins', sans-serif;
+            font-weight: 700;
         }
-        .founder{
-            color: rgb(138, 136, 136);
+
+        .founder {
+            color:#d7d7d7;
             font-weight: lighter;
             margin-top: 0;
         }
 
+        #arnabdxcode {
+            font-weight: 900;
+            font-family: sans-serif;
+        }
+
         #typing {
-            color: #00ffd5;
+            color: #447D9B;
             font-size: 20px;
             min-height: 24px;
+            font-weight: 400;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            margin: 0;
+            padding: 0;
         }
 
         .btn {
@@ -58,7 +64,6 @@
             transition: 0.3s;
         }
 
-        .btn:hover { background: white; }
 
         section {
             max-width: 800px;
@@ -66,13 +71,6 @@
             padding: 30px 20px;
         }
 
-        footer {
-            margin-top: 40px;
-            padding: 20px;
-            background: #111;
-            color: gray;
-            font-size: 14px;
-        }
 
         .toggle {
             position: fixed;
@@ -89,56 +87,58 @@
 </head>
 
 <body>
+    <nav class="navbar">
+        <div class="right">
+            <ul>
+                <li><a href="projects.html">My Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
 
-<div class="toggle" onclick="toggleMode()">🌙 Mode</div>
+            </ul>
+        </div>
+    </nav>
+    <header>
+        <img src="myphoto.jpeg" alt="Arnab Photo">
+        <h1>Arnab Debnath</h1>
+        <p class="founder">Founder of <span id="arnabdxcode">ArnabDxCode</span></p>
+        <div id="typing"></div>
+    </header>
 
-<header>
-    <img src="myphoto.jpeg" alt="Arnab Photo">
-    <h1>Arnab Debnath</h1>
-    <h4 class="founder">Founder of ArnabDxCode</h4>
-    <div id="typing"></div>
+    <section>
+        <h2>About Me</h2>
+        <p>
+            I build AI projects, coding apps, and exploring robotics.
+            Learning Web Developer
+        </p>
+    </section>
 
-    <a href="projects.html" class="btn">🚀 My Projects</a>
-    <a href="https://youtube.com/@arnabdxcode" class="btn" target="_blank">📺 YouTube</a>
-    <a href=" https://github.com/ArnabDxCode" class="btn" target="_blank">💻 GitHub</a>
-    <a href="contact.html" class="btn">📩 Contact</a>
-</header>
+    <footer>
+        © 2026 Arnab Debnath | Built with HTML & GitHub Pages
+    </footer>
 
-<section>
-    <h2>About Me</h2>
-    <p>
-        I love building AI projects, coding apps, and exploring robotics.
-        My goal is to become a robotics engineer and create smart technology that helps people.
-    </p>
-</section>
+    <script>
+        const text = ["Student", "Programmer", "Web Developer"];
+        let count = 0, index = 0, currentText = "", letter = "";
 
-<footer>
-    © 2026 Arnab | Built with HTML & GitHub Pages
-</footer>
+        (function type() {
+            if (count === text.length) count = 0;
+            currentText = text[count];
+            letter = currentText.slice(0, ++index);
 
-<script>
-    const text = ["Student", "Programmer",];
-    let count = 0, index = 0, currentText = "", letter = "";
+            document.getElementById("typing").textContent = letter;
+            if (letter.length === currentText.length) {
+                count++;
+                index = 0;
+                setTimeout(type, 1000);
+            } else {
+                setTimeout(type, 100);
+            }
+        })();
 
-    (function type() {
-        if (count === text.length) count = 0;
-        currentText = text[count];
-        letter = currentText.slice(0, ++index);
-
-        document.getElementById("typing").textContent = letter;
-        if (letter.length === currentText.length) {
-            count++;
-            index = 0;
-            setTimeout(type, 1000);
-        } else {
-            setTimeout(type, 100);
+        function toggleMode() {
+            document.body.classList.toggle("light-mode");
         }
-    })();
-
-    function toggleMode() {
-        document.body.classList.toggle("light-mode");
-    }
-</script>
+    </script>
 
 </body>
-</html>        
+
+</html>
