@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Arnab | Tech Creator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #0f0f0f;
+            color: white;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .light-mode {
+            background: #f4f4f4;
+            color: black;
+        }
+
+        header {
+            padding: 50px 20px;
+        }
+
+        img {
+            width: 150px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            border: 4px solid #00ffd5;
+        }
+
+        h1 { font-size: 40px; margin: 10px 0; }
+
+        #typing {
+            color: #00ffd5;
+            font-size: 20px;
+            min-height: 24px;
+        }
+
+        .btn {
+            display: inline-block;
+            margin: 10px;
+            padding: 12px 22px;
+            background: #00ffd5;
+            color: black;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover { background: white; }
+
+        section {
+            max-width: 800px;
+            margin: auto;
+            padding: 30px 20px;
+        }
+
+        footer {
+            margin-top: 40px;
+            padding: 20px;
+            background: #111;
+            color: gray;
+            font-size: 14px;
+        }
+
+        .toggle {
+            position: fixed;
+            top: 15px;
+            right: 15px;
+            cursor: pointer;
+            background: #00ffd5;
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-weight: bold;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="toggle" onclick="toggleMode()">🌙 Mode</div>
+
+<header>
+    <img src="yourphoto.jpg" alt="Arnab Photo">
+    <h1>Hi, I'm Arnab 👋</h1>
+    <div id="typing"></div>
+
+    <a href="projects.html" class="btn">🚀 My Projects</a>
+    <a href="https://youtube.com/@arnabdxcode" class="btn" target="_blank">📺 YouTube</a>
+    <a href=" https://github.com/ArnabDxCode" class="btn" target="_blank">💻 GitHub</a>
+    <a href="contact.html" class="btn">📩 Contact</a>
+</header>
+
+<section>
+    <h2>About Me</h2>
+    <p>
+        I love building AI projects, coding apps, and exploring robotics.
+        My goal is to become a robotics engineer and create smart technology that helps people.
+    </p>
+</section>
+
+<footer>
+    © 2026 Arnab | Built with HTML & GitHub Pages
+</footer>
+
+<script>
+    const text = ["Student", "Programmer", "AI Explorer", "Future Robotics Engineer"];
+    let count = 0, index = 0, currentText = "", letter = "";
+
+    (function type() {
+        if (count === text.length) count = 0;
+        currentText = text[count];
+        letter = currentText.slice(0, ++index);
+
+        document.getElementById("typing").textContent = letter;
+        if (letter.length === currentText.length) {
+            count++;
+            index = 0;
+            setTimeout(type, 1000);
+        } else {
+            setTimeout(type, 100);
+        }
+    })();
+
+    function toggleMode() {
+        document.body.classList.toggle("light-mode");
+    }
+</script>
+
+</body>
+</html>        
