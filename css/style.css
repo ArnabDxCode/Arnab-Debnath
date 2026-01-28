@@ -1,8 +1,8 @@
        body {
            margin: 0;
-           font-family: Arial, sans-serif;
-           background: #283F4F;
-           color: #e3ecf1;
+           font-family: 'Roboto', sans-serif;
+           background: #273f43;
+           color:#d7d7d7;
            text-align: center;
            transition: 0.3s;
        }
