@@ -1,7 +1,7 @@
        body {
            margin: 0;
            font-family: 'Roboto', sans-serif;
-           background: #273f43;
+           background: #FAF3E1;
            color:#d7d7d7;
            text-align: center;
            transition: 0.3s;
@@ -14,7 +14,7 @@
            display: flex;
            justify-content: space-around;
            align-items: center;
-           background-color: #1f323f;
+           background-color:#222222;
            color: #ffffff;
            font-weight: bold;
        }
@@ -29,17 +29,17 @@
        }
 
        .right ul li a {
-           color: aliceblue;
+           color: #F5E7C6;
            text-decoration-line: none;
        }
 
        .right ul li a:hover {
-           color: #FE7642;
+           color: #FA8112;
        }
 
        .navbar a {
            text-decoration: none;
-           color: #D7D7D7;
+           color: F5E7C6;
            font-family: 'Poppins', sans-serif;
            font-weight: 500;
            position: relative;
@@ -57,7 +57,7 @@
        footer {
            margin-top: 40px;
            padding: 20px;
-           color: rgba(20, 252, 240, 0.658);
+           color: rgba(79, 80, 63, 0.479);
            font-size: 14px;
            text-align: center;
        }
