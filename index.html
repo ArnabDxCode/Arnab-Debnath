@@ -7,7 +7,9 @@
     <meta name="description" content="A Personal Website by Arnab Debnath">
     <title>Home Page - Arnab Debnath</title>
     <link rel="stylesheet" href="/Arnab-Debnath/css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500&display=swap"
+        rel="stylesheet">
     <link rel="icon" type="image/png" href="/Arnab-Debnath/Images/AD Logo.png">
 
     <style>
@@ -19,7 +21,7 @@
             width: 150px;
             border-radius: 50%;
             margin-bottom: 15px;
-            border: 4px solid #FE7642;
+            border: 4px solid #fa0255;
             box-shadow: 0 0 20px #74684c;
         }
 
@@ -27,14 +29,19 @@
             font-size: 40px;
             margin: 10px 0;
             margin-bottom: 0;
-            color: #FE7642;
-            font-family:'Poppins', sans-serif;
+            color: #e100ff;
+            font-family: 'Poppins', sans-serif;
             font-weight: 700;
-            text-shadow: 0 0 15px #ff9c75;
+            text-shadow: 0 0 15px #fd00b148;
+        }
+
+        #my-name:hover{
+            transform: scale(1.2);
+            transition: all 0.4s ease, transform 0.4s ease;
         }
 
         .founder {
-            color:#b6a378;
+            color: #2464eeb7;
             font-weight: lighter;
             margin-top: 0;
         }
@@ -45,7 +52,7 @@
         }
 
         #typing {
-            color: #449b8d;
+            color: #04723e;
             font-size: 20px;
             min-height: 24px;
             font-weight: 400;
@@ -85,6 +92,7 @@
             font-weight: bold;
             color: black;
         }
+
     </style>
 </head>
 
@@ -94,13 +102,13 @@
             <ul>
                 <li><a href="projects.html">My Projects</a></li>
                 <li><a href="contact.html">Contact</a></li>
-
+                <li><a href="about.html">About Me</a></li>
             </ul>
         </div>
     </nav>
     <header>
-        <img src="myphoto.jpeg" alt="Arnab Photo">
-        <h1>Arnab Debnath</h1>
+        <img src="Images/myphoto.jpeg" alt="Arnab Photo">
+        <h1  id="my-name">Arnab Debnath</h1>
         <p class="founder">Founder of <span id="arnabdxcode">ArnabDxCode</span></p>
         <div id="typing"></div>
     </header>
