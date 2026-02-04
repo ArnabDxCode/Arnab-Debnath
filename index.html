@@ -35,7 +35,7 @@
             text-shadow: 0 0 15px #fd00b148;
         }
 
-        #my-name:hover{
+        #my-name:hover {
             transform: scale(1.2);
             transition: all 0.4s ease, transform 0.4s ease;
         }
@@ -92,62 +92,61 @@
             font-weight: bold;
             color: black;
         }
-
     </style>
 </head>
 
-<body>
-    <nav class="navbar">
-        <div class="right">
-            <ul>
-                <li><a href="projects.html">My Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="about.html">About Me</a></li>
-            </ul>
-        </div>
-    </nav>
-    <header>
-        <img src="Images/myphoto.jpeg" alt="Arnab Photo">
-        <h1  id="my-name">Arnab Debnath</h1>
-        <p class="founder">Founder of <span id="arnabdxcode">ArnabDxCode</span></p>
-        <div id="typing"></div>
-    </header>
 
-    <section>
-        <h2>About Me</h2>
-        <p>
-            I build AI projects, coding apps, and exploring robotics.
-            Learning Web Developer
-        </p>
-    </section>
+<nav class="navbar">
+    <div class="right">
+        <ul>
+            <li><a href="projects.html">My Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html">About Me</a></li>
+        </ul>
+    </div>
+</nav>
+<header>
+    <img src="Images/myphoto.jpeg" alt="Arnab Photo">
+    <h1 id="my-name">Arnab Debnath</h1>
+    <p class="founder">Founder of <span id="arnabdxcode">ArnabDxCode</span></p>
+    <div id="typing"></div>
+</header>
 
-    <footer>
-        © 2026 Arnab Debnath | Built with HTML & GitHub Pages
-    </footer>
+<section>
+    <h2>About Me</h2>
+    <p>
+        I build AI projects, coding apps, and exploring robotics.
+        Learning Web Developer
+    </p>
+</section>
 
-    <script>
-        const text = ["Student", "Programmer", "Web Developer"];
-        let count = 0, index = 0, currentText = "", letter = "";
+<footer>
+    © 2026 Arnab Debnath | Built with HTML & GitHub Pages
+</footer>
 
-        (function type() {
-            if (count === text.length) count = 0;
-            currentText = text[count];
-            letter = currentText.slice(0, ++index);
+<script>
+    const text = ["Student", "Programmer", "Web Developer"];
+    let count = 0, index = 0, currentText = "", letter = "";
 
-            document.getElementById("typing").textContent = letter;
-            if (letter.length === currentText.length) {
-                count++;
-                index = 0;
-                setTimeout(type, 1000);
-            } else {
-                setTimeout(type, 100);
-            }
-        })();
+    (function type() {
+        if (count === text.length) count = 0;
+        currentText = text[count];
+        letter = currentText.slice(0, ++index);
 
-        function toggleMode() {
-            document.body.classList.toggle("light-mode");
+        document.getElementById("typing").textContent = letter;
+        if (letter.length === currentText.length) {
+            count++;
+            index = 0;
+            setTimeout(type, 1000);
+        } else {
+            setTimeout(type, 100);
         }
-    </script>
+    })();
+
+    function toggleMode() {
+        document.body.classList.toggle("light-mode");
+    }
+</script>
 
 </body>
 
